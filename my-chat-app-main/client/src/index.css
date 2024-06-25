@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(rgba(0, 191, 255, 0.2), rgba(72, 255, 139, 0.2)),
+    url("/space.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@layer utilities {
+  .text-link {
+    @apply text-white leading-loose relative before:content-[''] 
+    before:w-0 before:h-0.5  before:absolute before:bottom-[-0.3rem] 
+    before:transition-[width] before:duration-[0.4s,left] before:delay-[0.4s] 
+    before:rounded-sm before:left-[0.2] hover:before:w-full hover:before:left-0;
+  }
+}
